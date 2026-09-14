@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eb5324734a549949b3039ea8c5f3b21, type: 3}
+  m_Name: Quest1_OP
+  m_EditorClassIdentifier: Assembly-CSharp::VNData
+  VNDialogue:
+  - dialogueCharacter: {fileID: 11400000, guid: 1d5d2975c5084274b9a5eb1d0e3a8dae, type: 2}
+    dialogueText: Terimakasih sudah mengambil quest.
+    dialogueDisplayDelay: 0
+    dialogueDisplayDuration: 3
+    displayMode: 1
+    backgroundImage: {fileID: 21300000, guid: a04dc30755e58b34c8af68a340217338, type: 3}
+  - dialogueCharacter: {fileID: 11400000, guid: 1d5d2975c5084274b9a5eb1d0e3a8dae, type: 2}
+    dialogueText: Kalian akan ditugaskan untuk mengawal paket hingga sampai tujuan,
+    dialogueDisplayDelay: 0
+    dialogueDisplayDuration: 3
+    displayMode: 1
+    backgroundImage: {fileID: 21300000, guid: a04dc30755e58b34c8af68a340217338, type: 3}
+  - dialogueCharacter: {fileID: 11400000, guid: 1d5d2975c5084274b9a5eb1d0e3a8dae, type: 2}
+    dialogueText: dan perkenalkan ini nona pemilik barang yang akan menunggu dikota
+      tujuan nanti.
+    dialogueDisplayDelay: 0
+    dialogueDisplayDuration: 3
+    displayMode: 1
+    backgroundImage: {fileID: 21300000, guid: a04dc30755e58b34c8af68a340217338, type: 3}
+  - dialogueCharacter: {fileID: 11400000, guid: f30ea29be9fcb754e88276207abaeecd, type: 2}
+    dialogueText: Kalian kurirnya?
+    dialogueDisplayDelay: 0
+    dialogueDisplayDuration: 2
+    displayMode: 1
+    backgroundImage: {fileID: 21300000, guid: a04dc30755e58b34c8af68a340217338, type: 3}
+  - dialogueCharacter: {fileID: 11400000, guid: 60ce59e1397105c4981fcd14d6f091b3, type: 2}
+    dialogueText: "Percayakan pada kami barang kiriman pasti aman \xB0\u25BD\xB0)"
+    dialogueDisplayDelay: 0
+    dialogueDisplayDuration: 2
+    displayMode: 0
+    backgroundImage: {fileID: 21300000, guid: a04dc30755e58b34c8af68a340217338, type: 3}
+  - dialogueCharacter: {fileID: 11400000, guid: f30ea29be9fcb754e88276207abaeecd, type: 2}
+    dialogueText: Kalo rusak atau kecolongan, bakal diganti dengan uang kalian loh
+      ya..(*insert
+    dialogueDisplayDelay: 0
+    dialogueDisplayDuration: 2
+    displayMode: 1
+    backgroundImage: {fileID: 21300000, guid: a04dc30755e58b34c8af68a340217338, type: 3}
+  - dialogueCharacter: {fileID: 11400000, guid: 5b82f9e8235b5924bb88377f7e49f036, type: 2}
+    dialogueText: "(\u252C\u252C_\u252C\u252C) b-baik"
+    dialogueDisplayDelay: 0
+    dialogueDisplayDuration: 2
+    displayMode: 0
+    backgroundImage: {fileID: 21300000, guid: a04dc30755e58b34c8af68a340217338, type: 3}

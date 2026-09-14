@@ -1,0 +1,53 @@
+name: Unity Project Notifier
+
+on: [push]
+
+jobs:
+  discord-notification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Format Commit Message
+        id: vars
+        env:
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+        run: |
+          # 1. Get the first line as Title
+          TITLE=$(echo "$COMMIT_MSG" | head -n 1)
+          echo "commit_title=$TITLE" >> $GITHUB_OUTPUT
+          
+          # 2. Extract Co-authors and only add '&' if they exist
+          # This filters for "Co-authored-by:", pulls the name, and joins with '&'
+          RAW_COAUTHORS=$(echo "$COMMIT_MSG" | grep -i "Co-authored-by:" | sed -E 's/Co-authored-by: ([^<]+).*/\1/i' | sed 's/[[:space:]]*$//' | paste -sd "&" -)
+          
+          if [ -z "$RAW_COAUTHORS" ]; then
+            echo "authors=${{ github.actor }}" >> $GITHUB_OUTPUT
+          else
+            echo "authors=${{ github.actor }} & $RAW_COAUTHORS" >> $GITHUB_OUTPUT
+          fi
+          
+          # 3. Get the rest of the message, trimming leading empty lines and removing Co-authored-by lines
+          {
+            echo "commit_body<<EOF"
+            echo "$COMMIT_MSG" | tail -n +2 | grep -v -i "^Co-authored-by:" | sed '/./,$!d'
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Send Message to Discord
+        uses: sarisia/actions-status-discord@v1
+        if: always()
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          status: ${{ job.status }}
+          content: "<@&1538072597110063194> Dengarkan notifnya. :stuck_out_tongue_winking_eye:"
+          nodetail: true
+          title: "Update for ${{ github.event.repository.name }}"
+          description: |
+            **Change Title:** ${{ steps.vars.outputs.commit_title }}
+
+            **Description:** ${{ steps.vars.outputs.commit_body }}
+
+            **Author:** ${{ steps.vars.outputs.authors }}
+
+            **Repo:** [${{ github.repository }}](https://github.com/${{ github.repository }}) | **Branch:** `${{ github.ref_name }}`
+          color: 0x7289da
+          url: "https://github.com/${{ github.repository }}/commit/${{ github.sha }}"

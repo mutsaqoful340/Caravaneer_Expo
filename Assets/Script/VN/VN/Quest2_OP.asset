@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eb5324734a549949b3039ea8c5f3b21, type: 3}
+  m_Name: Quest2_OP
+  m_EditorClassIdentifier: Assembly-CSharp::VNData
+  VNDialogue:
+  - dialogueCharacter: {fileID: 11400000, guid: 60ce59e1397105c4981fcd14d6f091b3, type: 2}
+    dialogueText: Piaaaaa
+    dialogueDisplayDelay: 0
+    dialogueDisplayDuration: 2
+    displayMode: 1
+    backgroundImage: {fileID: 21300000, guid: a04dc30755e58b34c8af68a340217338, type: 3}
+  - dialogueCharacter: {fileID: 11400000, guid: 5b82f9e8235b5924bb88377f7e49f036, type: 2}
+    dialogueText: Eeeck!?
+    dialogueDisplayDelay: 0
+    dialogueDisplayDuration: 2
+    displayMode: 0
+    backgroundImage: {fileID: 21300000, guid: a04dc30755e58b34c8af68a340217338, type: 3}
+  - dialogueCharacter: {fileID: 11400000, guid: 60ce59e1397105c4981fcd14d6f091b3, type: 2}
+    dialogueText: "\xB0\u25BD\xB0)?"
+    dialogueDisplayDelay: 0
+    dialogueDisplayDuration: 3
+    displayMode: 1
+    backgroundImage: {fileID: 21300000, guid: a04dc30755e58b34c8af68a340217338, type: 3}
+  - dialogueCharacter: {fileID: 11400000, guid: 5b82f9e8235b5924bb88377f7e49f036, type: 2}
+    dialogueText: Ha-hahaha nggak jadi ndak papa
+    dialogueDisplayDelay: 0
+    dialogueDisplayDuration: 3
+    displayMode: 0
+    backgroundImage: {fileID: 21300000, guid: a04dc30755e58b34c8af68a340217338, type: 3}
+  - dialogueCharacter: {fileID: 11400000, guid: 1d5d2975c5084274b9a5eb1d0e3a8dae, type: 2}
+    dialogueText: Hmm...
+    dialogueDisplayDelay: 0
+    dialogueDisplayDuration: 2
+    displayMode: 1
+    backgroundImage: {fileID: 21300000, guid: a04dc30755e58b34c8af68a340217338, type: 3}
+  - dialogueCharacter: {fileID: 11400000, guid: 1d5d2975c5084274b9a5eb1d0e3a8dae, type: 2}
+    dialogueText: Kalian saling kenal dan berteman kan?
+    dialogueDisplayDelay: 0
+    dialogueDisplayDuration: 2
+    displayMode: 1
+    backgroundImage: {fileID: 21300000, guid: a04dc30755e58b34c8af68a340217338, type: 3}
+  - dialogueCharacter: {fileID: 11400000, guid: 60ce59e1397105c4981fcd14d6f091b3, type: 2}
+    dialogueText: YESS
+    dialogueDisplayDelay: 0
+    dialogueDisplayDuration: 2
+    displayMode: 1
+    backgroundImage: {fileID: 21300000, guid: a04dc30755e58b34c8af68a340217338, type: 3}
+  - dialogueCharacter: {fileID: 11400000, guid: 5b82f9e8235b5924bb88377f7e49f036, type: 2}
+    dialogueText: "(\xB0\u0414 \xB0; )!??"
+    dialogueDisplayDelay: 0
+    dialogueDisplayDuration: 2
+    displayMode: 0
+    backgroundImage: {fileID: 21300000, guid: a04dc30755e58b34c8af68a340217338, type: 3}

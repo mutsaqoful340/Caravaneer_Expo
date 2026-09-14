@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eb5324734a549949b3039ea8c5f3b21, type: 3}
+  m_Name: Quest1_ED
+  m_EditorClassIdentifier: Assembly-CSharp::VNData
+  VNDialogue:
+  - dialogueCharacter: {fileID: 11400000, guid: 5b82f9e8235b5924bb88377f7e49f036, type: 2}
+    dialogueText: Uwee akhirnya sampai ditujuan..
+    dialogueDisplayDelay: 0
+    dialogueDisplayDuration: 3
+    displayMode: 0
+    backgroundImage: {fileID: 21300000, guid: f203053804bfa214ab8038631084c342, type: 3}
+  - dialogueCharacter: {fileID: 11400000, guid: 5b82f9e8235b5924bb88377f7e49f036, type: 2}
+    dialogueText: "Ku cuma mau cari kerjaan yang normal kok gini jadinya (\u252C\u252C_\u252C\u252C)"
+    dialogueDisplayDelay: 1
+    dialogueDisplayDuration: 3
+    displayMode: 0
+    backgroundImage: {fileID: 21300000, guid: f203053804bfa214ab8038631084c342, type: 3}
