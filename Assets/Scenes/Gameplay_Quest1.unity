@@ -5545,7 +5545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WagonProgress
   pointStart: {fileID: 1110029627}
   pointEnd: {fileID: 416315502}
-  Wagon: {fileID: 1183874755}
+  Wagon: {fileID: 1183874757}
   progressSlider: {fileID: 1865484648}
   progressPercentageText: 'Wagon Progress: '
 --- !u!114 &518848947
