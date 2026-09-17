@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -23,14 +22,17 @@ public class WagonComponent : MonoBehaviour
     [SerializeField] private int startHPFunctional = 5;
     [SerializeField] private int startHPBroken = 8;
     public WagonState currentWagonState = WagonState.Functional;
+    public float IFrameDuration = 1f;
+    public UnityEvent onWagonBroken;
+
+    [Header("Reapair Settings")]
     [Tooltip("Time held before checking whether the wagon can be repaired.")]
     public float repairEligibilityCheckDuration = 0.5f;
     [Tooltip("Holding the action button for at least this long triggers a repair instead of mounting.")]
     public float repairHoldThreshold = 0.5f;
     [Tooltip("Repair materials consumed and HP restored per long-press repair.")]
     public int repairCost = 1;
-    public float IFrameDuration = 1f;
-    public UnityEvent onWagonBroken;
+    public GameObject repairIcon;
 
     [Header("Wagon References")]
     public GameObject wagonFunctionalVisual;
@@ -86,6 +88,7 @@ public class WagonComponent : MonoBehaviour
 
     private void Start()
     {
+        if (repairIcon != null) repairIcon.SetActive(false);
         UpdateWagonVisuals();
     }
 
@@ -270,7 +273,8 @@ public class WagonComponent : MonoBehaviour
         }
 
         CameraConstraint.Instance?.CameraShake();
-
+        audioInvoker.OnPlaySFXLocal("ImpactWood", SFXType.OneShot);
+        
         StartCoroutine(IFrameCoroutine());
         if (currentWagonState == WagonState.Functional)
         {
@@ -319,8 +323,6 @@ public class WagonComponent : MonoBehaviour
                 AnimateLostHearts(previousHP - currHPFunctional);
             }
         }
-
-        audioInvoker.OnPlaySFXLocal("ImpactWood", SFXType.OneShot);
         Manager_GameLocal.Instance.OnCheckEntity();
     }
 
@@ -522,6 +524,11 @@ public class WagonComponent : MonoBehaviour
         if (wagonBrokenVisual != null)
         {
             wagonBrokenVisual.SetActive(showBroken);
+        }
+
+        if (repairIcon != null)
+        {
+            repairIcon.SetActive(currentWagonState == WagonState.Broken);
         }
     }
 

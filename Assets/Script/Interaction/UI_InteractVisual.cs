@@ -172,5 +172,10 @@ public class UI_InteractVisual : MonoBehaviour
         {
             twoInteractCover.SetActive(playerCount >= 1);
         }
+
+        if (interactHintIcon)
+        {
+            interactHintIcon.SetActive(playerCount == 0);
+        }
     }
 }

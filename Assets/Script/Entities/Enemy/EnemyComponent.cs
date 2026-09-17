@@ -94,6 +94,7 @@ public class EnemyComponent : MonoBehaviour
         }
         
         weaponAnimator.SetTrigger("Attack");
+        animator.ResetTrigger("Attack");
         animator.SetTrigger("Attack");
     }
 

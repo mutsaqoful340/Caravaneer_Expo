@@ -4884,7 +4884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Weapon
   enemyParent: {fileID: 2747884494428855356}
   enemySword: {fileID: 0}
-  rotationSpeed: 5
+  rotationSpeed: 100
 --- !u!95 &4781100669841265505
 Animator:
   serializedVersion: 7

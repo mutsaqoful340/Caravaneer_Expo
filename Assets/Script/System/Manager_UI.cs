@@ -19,7 +19,7 @@ public class Manager_UI : MonoBehaviour
     [Tooltip("Panels to manage by name and GameObject reference.")]
     public PanelReference[] panels;
     public GameObject[] panelHistory;
-
+    public bool isMainMenu;
     private GameObject currentActivePanel;
     
     private void Awake()

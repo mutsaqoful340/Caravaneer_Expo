@@ -227,6 +227,7 @@ public class PlayerComponent : MonoBehaviour
 
     public void OnPause(InputValue value)
     {
+        if (Manager_UI.Instance.isMainMenu) return;
         if (value.isPressed)
         {
             if (Manager_Game.Instance.currentGameState == GameState.Gameplay)
@@ -334,7 +335,8 @@ public class PlayerComponent : MonoBehaviour
     {
         if (other.CompareTag("Wagon"))
         {
-            if (wagonInteractObject != null && other.gameObject == wagonInteractObject.gameObject)
+            // Don't drop the reference while mounted, or dismounting later becomes impossible.
+            if (!isMounted && wagonInteractObject != null && other.gameObject == wagonInteractObject.gameObject)
             {
                 wagonInteractObject.EndInteraction(this);
                 wagonInteractObject = null;

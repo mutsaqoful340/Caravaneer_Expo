@@ -1,7 +1,6 @@
 /// <summary>
 /// This script calculates the progress of a wagon between two points and updates a UI slider to reflect that progress.
 /// </summary>
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +9,7 @@ public class WagonProgress : MonoBehaviour
     [Header("Wagon Progress References")]
     public Transform pointStart;
     public Transform pointEnd;
-    public Transform Wagon;
+    public WagonComponent Wagon;
     public Slider progressSlider; // Reference to the UI Slider component
 
     [Header("Debug")]
@@ -18,7 +17,7 @@ public class WagonProgress : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Wagon.IsDestroyed())
+        if (Wagon.isDestroyed)
         {
             return;
         }
@@ -33,7 +32,7 @@ public class WagonProgress : MonoBehaviour
         float totalDistance = Vector3.Distance(pointStart.position, pointEnd.position);
 
         // Calculate the distance from the start point to the wagon's current position
-        float currentDistance = Vector3.Distance(pointStart.position, Wagon.position);
+        float currentDistance = Vector3.Distance(pointStart.position, Wagon.transform.position);
 
         // Calculate the progress as a value between 0 and 1
         float progress = Mathf.Clamp01(currentDistance / totalDistance);

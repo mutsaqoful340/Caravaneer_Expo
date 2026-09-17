@@ -26,8 +26,8 @@ public class Manager_Game : MonoBehaviour
 
     private void Awake()
     {
-        // Cursor.lockState = CursorLockMode.Confined;
-        // Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
         currentGameState = GameState.Gameplay;
         // currentGameScene = GameScene.MainMenu;
 
