@@ -5,7 +5,7 @@
 using UnityEngine;
 public enum GameType
 {
-    MainMenu,
+    UI,
     Gameplay,
     VN
 }
@@ -13,7 +13,7 @@ public enum GameType
 public class Manager_Game_GameScene : MonoBehaviour
 {
     public static Manager_Game_GameScene Instance {get; set;}
-    public GameType currentGameType = GameType.MainMenu;
+    public GameType currentGameType = GameType.UI;
 
     private void Awake()
     {
@@ -23,6 +23,21 @@ public class Manager_Game_GameScene : MonoBehaviour
     private void Start()
     {
         SetGameType(currentGameType);
+    }
+
+    public void SetGameTypeToMainMenu()
+    {
+        SetGameType(GameType.UI);
+    }
+
+    public void SetGameTypeToGameplay()
+    {
+        SetGameType(GameType.Gameplay);
+    }
+
+    public void SetGameTypeToVN()
+    {
+        SetGameType(GameType.VN);
     }
 
     public void SetGameType(GameType newGameType)
@@ -37,8 +52,8 @@ public class Manager_Game_GameScene : MonoBehaviour
 
         switch (newGameType)
         {
-            case GameType.MainMenu:
-                Manager_Game.Instance.SetScene(GameScene.MainMenuScene);
+            case GameType.UI:
+                Manager_Game.Instance.SetScene(GameScene.UIScene);
                 Manager_Game.Instance.SetState(GameState.UI);
                 break;
             case GameType.Gameplay:

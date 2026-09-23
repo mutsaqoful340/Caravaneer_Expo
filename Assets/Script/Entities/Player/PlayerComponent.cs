@@ -206,6 +206,14 @@ public class PlayerComponent : MonoBehaviour
         pressedTarget = PressedTarget.None;
     }
 
+    public void OnInformation(InputValue value)
+    {
+        if (Manager_Game.Instance.currentGameState != GameState.Gameplay) return;
+        if (currentHPStage == PlayerHPStage.KnockedOut) return;
+        Debug.Log($"{gameObject.name} requested information at t={Time.time:F2}");
+        HUD_Information.Instance.ShowInformation();
+    }
+
     private void HandleActionReleasedByPolling()
     {
         if (pressedTarget == PressedTarget.None) return;
@@ -505,7 +513,7 @@ public class PlayerComponent : MonoBehaviour
 
     private void OnPerformAction()
     {
-        if (!isMercenary || interactObject || reviveManager || Manager_Game.Instance.currentGameScene == GameScene.MainMenuScene) return;
+        if (!isMercenary || interactObject || reviveManager || Manager_Game.Instance.currentGameScene == GameScene.UIScene) return;
 
         if (animator == null)
         {

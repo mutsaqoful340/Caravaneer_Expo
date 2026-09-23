@@ -19,8 +19,8 @@ public class WagonComponent : MonoBehaviour
     [SerializeField] private Vector3 wheelRotationAxis = Vector3.forward;
     [Tooltip("Caps how often the wheel rotation visually updates, for a stepped/low-FPS animation look.")]
     [SerializeField] private float wheelAnimationFPS = 12f;
-    [SerializeField] private int startHPFunctional = 5;
-    [SerializeField] private int startHPBroken = 8;
+    public int startHPFunctional = 5;
+    public int startHPBroken = 8;
     public WagonState currentWagonState = WagonState.Functional;
     public float IFrameDuration = 1f;
     public UnityEvent onWagonBroken;
@@ -44,6 +44,7 @@ public class WagonComponent : MonoBehaviour
     public GameObject heartFunctionalPrefab;
     public GameObject heartBrokenPrefab;
     public Audio_Invoker audioInvoker;
+    public Wagon_Breaker wagonBreaker;
 
     [Header("Player References")]
     public PlayerComponent mechanic;
@@ -90,6 +91,7 @@ public class WagonComponent : MonoBehaviour
     {
         if (repairIcon != null) repairIcon.SetActive(false);
         UpdateWagonVisuals();
+        if (wagonBreaker != null) wagonBreaker.GetWagonStats();
     }
 
     // Reapplies starting HP after Awake, so spawners can carry over upgrades bought before this wagon was instantiated.

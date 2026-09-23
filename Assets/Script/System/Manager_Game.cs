@@ -11,7 +11,7 @@ public enum GameState
 
 public enum GameScene
 {
-    MainMenuScene,
+    UIScene,
     GameplayScene,
     VNScene
 }
@@ -22,7 +22,7 @@ public class Manager_Game : MonoBehaviour
     [Tooltip("Manages player input modes.")]
     public GameState currentGameState = GameState.Gameplay;
     [Tooltip("Manages the current game scene.")]
-    public GameScene currentGameScene = GameScene.MainMenuScene;
+    public GameScene currentGameScene = GameScene.UIScene;
 
     private void Awake()
     {
@@ -90,7 +90,7 @@ public class Manager_Game : MonoBehaviour
     {
         switch (newScene)
         {
-            case GameScene.MainMenuScene:
+            case GameScene.UIScene:
                 // Handle main menu scene logic
                 break;
             case GameScene.GameplayScene:
