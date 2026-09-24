@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6779065328077490526}
   - component: {fileID: 4974448565936053328}
   m_Layer: 0
-  m_Name: ReviveManager
+  m_Name: ReviveManager_Pippa
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,7 +146,7 @@ MonoBehaviour:
   isHoldInteract: 1
   destroyDelay: 0
   holdDuration: 2
-  interactVisualPrefab: {fileID: 7266190346334905339, guid: 6fd5860cf4df4ae4caf0e6232765b018, type: 3}
+  interactVisualPrefab: {fileID: 7266190346334905339, guid: 60aefad2a6d4cc74f9f020b032b642a5, type: 3}
   twoInteractCover: {fileID: 0}
   interactVisualComponent: {fileID: 0}
   onInteract:

@@ -206,12 +206,20 @@ public class PlayerComponent : MonoBehaviour
         pressedTarget = PressedTarget.None;
     }
 
-    public void OnInformation(InputValue value)
+    public void OnInformation_Pia(InputValue value)
     {
         if (Manager_Game.Instance.currentGameState != GameState.Gameplay) return;
         if (currentHPStage == PlayerHPStage.KnockedOut) return;
         Debug.Log($"{gameObject.name} requested information at t={Time.time:F2}");
-        HUD_Information.Instance.ShowInformation();
+        HUD_Information.Instance.ShowInformation_Pia();
+    }
+
+    public void OnInformation_Pippa(InputValue value)
+    {
+        if (Manager_Game.Instance.currentGameState != GameState.Gameplay) return;
+        if (currentHPStage == PlayerHPStage.KnockedOut) return;
+        Debug.Log($"{gameObject.name} requested information at t={Time.time:F2}");
+        HUD_Information.Instance.ShowInformation_Pippa();
     }
 
     private void HandleActionReleasedByPolling()

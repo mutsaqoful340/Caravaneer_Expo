@@ -34,9 +34,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Information",
+                    "name": "Information_Pia",
                     "type": "Button",
                     "id": "af5eecad-3a05-4706-8d42-cbbc266eeafe",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Information_Pippa",
+                    "type": "Button",
+                    "id": "620dfa56-c42e-450a-8644-41d3ea6ba6f1",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -216,7 +225,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";P1",
-                    "action": "Information",
+                    "action": "Information_Pia",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "307c9385-0c79-4c1b-bae0-5e302e1e62cd",
+                    "path": "<Keyboard>/f2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";P2",
+                    "action": "Information_Pippa",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

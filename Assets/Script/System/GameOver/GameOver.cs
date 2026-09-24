@@ -1,7 +1,14 @@
+using TMPro;
 using UnityEngine;
 
 public class GameOver : MonoBehaviour
 {
+    public TextMeshProUGUI timerText;
+    void OnEnable()
+    {
+        Time_Stopwatch.Instance?.StopStopwatch();
+        timerText.text = Time_Stopwatch.Instance?.timerText?.text;
+    }
     public void OnRetry(string sceneName)
     {
         SceneLoader.Instance.LoadScene(sceneName);

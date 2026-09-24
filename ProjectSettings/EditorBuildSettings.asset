@@ -17,15 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gameplay_Expo_Gameplay.unity
     guid: 84cb6591f49b782478ba614d5639c3f1
-  - enabled: 1
-    path: Assets/Scenes/Gameplay_Quest1.unity
-    guid: 68699ea495531d64096e0a8eb18b9df0
-  - enabled: 1
-    path: Assets/Scenes/Gameplay_Quest2.unity
-    guid: 85ff7ca08b6811f4ea5cf95ef4e67532
-  - enabled: 1
-    path: Assets/Scenes/Gameplay_Quest3.unity
-    guid: abf113df3370219478beb8cc63e14b57
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 99f9c9493070a9d4c979a8fec7c5a8d3, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: ddb0d3c38a19a5748bcf7d0f027d067b, type: 2}

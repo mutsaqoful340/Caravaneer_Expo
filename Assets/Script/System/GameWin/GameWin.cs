@@ -1,9 +1,10 @@
 using UnityEngine;
-
+using TMPro;
 public class GameWin : MonoBehaviour
 {
     [Tooltip("Reward amount given to the player upon winning the game.")]
     public int rewardAmount;
+    public TextMeshProUGUI playTimeDuration;
     
     public void OnTriggerEnter(Collider other)
     {
@@ -23,5 +24,10 @@ public class GameWin : MonoBehaviour
     private void RewardPlayer()
     {
         PlayerInventory.Instance.AddCoins(rewardAmount);
+        if (Time_Stopwatch.Instance != null)
+        {
+            Time_Stopwatch.Instance?.StopStopwatch();
+            playTimeDuration.text = Time_Stopwatch.Instance?.timerText?.text;
+        }
     }
 }

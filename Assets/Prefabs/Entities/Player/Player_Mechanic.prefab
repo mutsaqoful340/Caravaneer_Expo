@@ -5064,7 +5064,7 @@ MonoBehaviour:
   playerInputComp: {fileID: 6872265538902852116}
   inventory: {fileID: 0}
   reviveManager: {fileID: 0}
-  reviveManagerPrefab: {fileID: 4650216304066145115, guid: b6202b4693e194348b5c9c45a9c24d3b, type: 3}
+  reviveManagerPrefab: {fileID: 4650216304066145115, guid: b883f6b60c7a36f47865b12248a2970e, type: 3}
   audioInvoker: {fileID: -489448087997936665}
   wagonInteractObject: {fileID: 0}
   currentEnemy: {fileID: 0}
